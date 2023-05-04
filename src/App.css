@@ -1,4 +1,7 @@
-
+body{
+  margin: 0;
+  padding: 0;
+}
 .top__ {
   display: flex;
   justify-content: space-between;
@@ -16,7 +19,7 @@
 }
 
 .numbers>a {
-  margin: 0px 15px 0px 0px;
+  margin: 0px 0px 0px 30px;
   font-size: 17px;
   color: rgb(26, 102, 255);
 }
@@ -45,7 +48,8 @@
 }
 
 header{
-  height: 100px;
+ 
+  height: 80px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -86,8 +90,6 @@ header>ul>select{
 .Menu__{
    
     background: #0d47a1;
-    box-shadow: 0 1px rgba(0,0,0,.04), inset 0  
-     -1px  rgba(0,0,0,.04);
     color: #3d464d;
     height: 54px;
     width: 100%;
@@ -101,33 +103,74 @@ header>ul>select{
   cursor: pointer;
   border: none;
   background-size: contain;
+  background-color: #0d48a1;
   height: 30px;
   width: 30px;
   background-image: url(/public/Menu_Icon.png);
   margin-top: 11.5px;
-  
-
+  position: absolute;
 }
-.product{
+
+.drop__down{
+ 
+  position: absolute;
+  top: 30px;
+  left: -100px;
+  width: 224px;
+  height: 100%;
+  background-color: #ffffff;
+  transition: transform 0.3s ease-in-out; 
+  transform: translateX(-110%);
+  list-style: none;
+  text-align: center;
+  
+}
+.drop__down.show{
+  transform: translate(8%);
+ 
+}
+
+
+
+.product__button{
   color: white;
   font-size: 20px;
   border: none;
   background-color:#0d47a1;
-
+  margin-left: 25px;
 
 }
 .left__side__product{
   display: flex;
   padding-left: 7% ;
+ 
+}
+.drop__down>li{
   
+  background-color:#fff;
+  border:1px solid #aa9f9f7d;
+}
+.drop__down>li>a{
+  font-weight: 700;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: inline-block;
+  padding: 10px 0.1px;
+  background-color: #ffffff;
+  color: inherit;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  
+  text-decoration: none;
  
 }
 
+
 .liked__shop>button{
-  margin-right: 5px;
-  margin-top: 11.5px;
-  height: 30px;
-  width: 30px;
+  margin-right: 7px;
+  margin-top: 10px;
+  height: 35px;
+  width: 35px;
   border-radius: 100%;
   border: none;
   
@@ -138,15 +181,150 @@ header>ul>select{
   margin-right: 4%;
   
 }
+.heart_{
+  background-image: url(/public/heart__icon.png);
+  background-size: cover;
+
+}
+.cart_{
+  background-image: url(/public/cart__icon.png);
+  background-size: cover;
+}
+.profile_{
+  background-image: url(/public/Profile__icon.png);
+  background-size: cover;
+}
 .indicator{
-  margin-left: 10px;
-  
+  margin-left: 14px;
   height: 15px;
-  font-size: 10px;
+  font-size: 13px;
   padding: 0 5px;
-  border-radius: 1000px;
+  border-radius: 110%;
   position: relative;
-  top: -11px;
-  background: #5f87a1;
+  top: 14px;
+  background: #000000;
   font-weight: 700;
+  color: white;
+}
+
+.Menu__>input{
+  margin-right: 3px;
+  padding-left: 1%;
+  font-size: 19px;
+  margin-top: 6px;
+  border-radius: 20px;
+  border:none;
+  height: 40px;
+  width: 400px;
+ 
+}
+.Menu__>input::placeholder{
+  font-size: large;
+
+}
+
+.background__{
+  
+  display: flex;
+  background-size: cover;
+ background-image: url(/public/back__pic.jpg);
+ min-height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+
+}
+
+.container__{
+  width: 100%;
+  
+  /*  */
+}
+.h2__title{
+  font-size: 23px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Mardoto",sans-serif;
+}
+.h2__title::after{
+  margin-left: 15px;
+  content: "";
+  display: block;
+  width: 66px;
+  height: 4px;
+  background-color: #333;
+}
+.h2__title::before{
+  margin-right: 15px;
+  content: "";
+  display: block;
+  width: 66px;
+  height: 4px;
+  background-color: #333;
+}
+.footer__{
+  display: flex;
+  justify-content: space-between;
+}
+.footer__img{
+  width: 94px;
+  height: 94px;
+  background-image: url(/public/download.png);
+  display: flex;
+  background-repeat: no-repeat;
+  background-size:contain;
+  text-align: center;
+  border:none;
+}
+.footer__img_email{
+  position: relative;
+  width: 100%;
+  padding-left: 0px;
+  margin-left: 40px;
+}
+.footer__img_email>ul{
+  margin-left: 0px;
+  margin-top: 0px;
+  font-size: 14px;
+    line-height: 20px;
+    list-style: none;
+    padding-left: 5px;
+    font-size: 16px;
+}
+.footer__img_email>ul>li>pre{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer__input_button{
+ 
+margin: 30px 20px 0px 0px;
+}
+.footer__input_button>input{
+  font-size: 16px;
+  
+  border-radius: 20px;
+  border: 2px solid gray;
+  height: 30px;
+  width: 200px;
+  margin-bottom: 5px;
+  text-align: center;
+ 
+}
+.footer__input_button>button{
+ background-color: #0d47a1;
+ color: white;
+ height: 40px;
+ width: 150px;
+ text-align: center;
+ border-radius: 10px;
+ border: none;
+ font-size: 18px;
+ margin-left: 30px;
+ letter-spacing: 1px;
+ cursor: pointer;
+
 }

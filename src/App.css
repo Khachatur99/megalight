@@ -1,6 +1,8 @@
 body{
   margin: 0;
   padding: 0;
+  overflow-x:auto;
+  
 }
 .top__ {
   display: flex;
@@ -14,14 +16,13 @@ body{
 .numbers {
   display: flex;
  flex-direction: row;
- 
-
 }
 
 .numbers>a {
   margin: 0px 0px 0px 30px;
   font-size: 17px;
   color: rgb(26, 102, 255);
+  text-decoration: none;
 }
 .language{
   margin-right: 7%;
@@ -54,7 +55,7 @@ header{
   display: flex;
   justify-content: space-between;
 }
-header>image {
+header>a>div{
   width: 94px;
   height: 94px;
   background-image: url(/public/download.png);
@@ -63,7 +64,8 @@ header>image {
   background-size:contain;
   text-align: center;
   border:none;
-  margin-left: 7%;
+  
+  margin-left: 40%;
   }
 
   header>ul{
@@ -226,11 +228,19 @@ header>ul>select{
 .background__{
   
   display: flex;
-  background-size: cover;
+  background-size: contain;
  background-image: url(/public/back__pic.jpg);
- min-height: 500px;
+  
+  min-height: 500px;
   width: 100%;
   background-repeat: no-repeat;
+  background-position: center;
+   opacity: 1;
+
+}
+.background__::before{
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
 
 }
 
@@ -264,6 +274,7 @@ header>ul>select{
   background-color: #333;
 }
 .footer__{
+ 
   display: flex;
   justify-content: space-between;
 }
@@ -278,10 +289,16 @@ header>ul>select{
   border:none;
 }
 .footer__img_email{
+  
   position: relative;
   width: 100%;
   padding-left: 0px;
   margin-left: 40px;
+}
+.footer__img_email>a{
+  display: flex;
+  width: 94px;
+  height: 94px;
 }
 .footer__img_email>ul{
   margin-left: 0px;
